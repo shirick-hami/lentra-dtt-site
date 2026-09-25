@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy policy · Lentra DTT</title>
+<style>:root{color-scheme:light dark}body{font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;max-width:720px;margin:0 auto;padding:40px 20px;color:#1b1f2a;background:#f5f7fb}@media(prefers-color-scheme:dark){body{color:#e9ecf5;background:#0d1626}}h1,h2{line-height:1.25}a{color:#3b5bdb}</style></head>
+<body>
+<p><a href="index.html">← Lentra DTT</a></p>
+<h1>Privacy policy</h1>
+<p><em>Last updated 25 September 2026.</em></p>
+
+<h2>What the app is</h2>
+<p>Lentra DTT is an internal mobile application used by Lentra employees to record work effort in Lentra's DevRev workspace. It is not offered to the public.</p>
+
+<h2>Data the app handles</h2>
+<ul>
+  <li><strong>Access tokens</strong> you enter for DevRev, GitLab and, optionally, an AI provider. They are stored only in your device's secure keychain or keystore and are never included in backups or exports.</li>
+  <li><strong>Your settings</strong> (role, manager, testers, repository mappings, misc categories) and a <strong>local history</strong> of the effort you logged. These are stored on your device in an encrypted database that only the app can open.</li>
+  <li><strong>Effort entries</strong> read from DevRev. Your own entries are kept for the Insights views. Entries of people in your reporting tree are cached for the team views and team reminders; everyone else's are discarded and never stored.</li>
+  <li><strong>Names and work email addresses</strong> of people in your reporting tree, read from DevRev's user directory, so the app can address team reminders. They live in the same encrypted database. Reminders you send go only to DevRev (a comment on the person's ticket) or to your own mail app as a draft.</li>
+  <li><strong>Source code changes</strong> (commit messages and diffs) read from Lentra's GitLab when you analyse a branch. If you enable an AI provider, that content is sent to the provider you configured (Anthropic, or a server your company hosts) solely to propose task groupings. With the default built-in grouping nothing leaves the device.</li>
+</ul>
+
+<h2>Google Drive</h2>
+<p>If you connect a Google account, the app requests two permissions: access to its own hidden application folder in your Drive (<code>drive.appdata</code>) and access to files it creates itself (<code>drive.file</code>). It uses them to store an encrypted backup of your local data and a monthly effort report that you may share with your manager. The app cannot see, read or modify any other file in your Drive. You can disconnect the account at any time in the app, and revoke access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Google user data is never sold, used for advertising, or shared with third parties; it is used only to provide the backup and report features you enable, in line with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+
+<h2>Where data goes</h2>
+<p>The app has no server of its own. It communicates directly from your device with DevRev, Lentra's GitLab, Google Drive (if connected) and the AI provider you chose (if any). Exports you create are protected with a password you choose before they leave the device.</p>
+
+<h2>Diagnostics</h2>
+<p>Builds that include a Sentry endpoint send crash reports, warning and error logs, and performance traces (which screens were opened, how long DevRev, GitLab and Drive calls took and whether they failed) to a Sentry project operated for Lentra. Tokens, ticket text, notes, hours and your email are never included; the only identifier is your DevRev user id. You can turn this off at any time under Settings → Security → Share diagnostics, after which nothing is sent.</p>
+
+<h2>Retention and deletion</h2>
+<p>Local data stays on your device until you sign out of the app, uninstall it, or restore a backup. Backups in your Google Drive stay until you delete them or disconnect the account. Effort recorded in DevRev is governed by Lentra's DevRev retention policies.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy go to the Lentra engineering team responsible for the app.</p>
+</body></html>
