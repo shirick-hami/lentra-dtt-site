@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "updatedAt": null,
+  "sha256": [],
+  "note": "Sub-admins are managed from the admin app (main admin \u2192 Settings \u2192 Admins) and stored in the main admin's Google Drive. This file is only a fallback source and is intentionally empty."
+}
