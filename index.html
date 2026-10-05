@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- No scripts, no third-party requests: the page may load only its own images and its inline styles. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Lentra DTT</title>
+<style>:root{color-scheme:light dark}body{font:16px/1.55 -apple-system,Segoe UI,Roboto,sans-serif;max-width:720px;margin:0 auto;padding:40px 20px;color:#1b1f2a;background:#f5f7fb}@media(prefers-color-scheme:dark){body{color:#e9ecf5;background:#0d1626}}img.wordmark{height:40px}h1{margin:24px 0 4px}p.lead{color:#5f6675;font-size:18px}a{color:#3b5bdb}footer{margin-top:48px;font-size:14px;color:#868e96}#features h2{margin:36px 0 4px}#features>p{margin:0 0 16px;color:#5f6675}nav.jump{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}nav.jump a{font-size:14px;padding:4px 12px;border-radius:999px;border:1px solid rgba(24,54,101,.25);text-decoration:none}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}.grp{padding:16px 18px;border-radius:16px;background:rgba(24,54,101,.08);min-width:0}.grp h3{margin:0 0 8px;font-size:17px}.grp ul{margin:0;padding-left:18px}.grp li{margin:0 0 6px;overflow-wrap:anywhere}.grp li:last-child{margin-bottom:0}.grp b{font-weight:600}@media(prefers-color-scheme:dark){#features>p{color:#aab2c3}.grp{background:rgba(120,150,210,.12)}nav.jump a{border-color:rgba(160,180,230,.35);color:#9db4ff}a{color:#8fa8ff}}</style></head>
+<body>
+<div style="display:flex;align-items:center;gap:18px"><picture><source srcset="app-icon-dark.png" media="(prefers-color-scheme: dark)"><img src="app-icon.png" alt="Lentra DTT" width="96" height="96" style="width:96px;height:96px;border-radius:24px;box-shadow:0 8px 24px rgba(20,30,60,.15)"></picture><img class="wordmark" src="logo.svg" alt="Lentra"></div>
+<h1>Lentra DTT</h1>
+<p class="lead">Lentra Daily Time Tracker. A mobile app for Lentra employees to log daily development and miscellaneous effort into DevRev from their phone.</p>
+<p>The app is distributed internally to Lentra staff. It stores your settings and history on your own device in an encrypted database, keeps your access tokens in the device keychain, and can, if you choose, back up an encrypted copy to a Google Drive account you connect.</p>
+<section id="download" data-version="2.0.14" style="margin:28px 0;padding:20px;border-radius:16px;background:rgba(24,54,101,.08)">
+  <h2 style="margin:0 0 6px">Download for Android</h2>
+  <p style="margin:0 0 14px">Signed release build, one app for everyone (admin tools unlock inside for admins). Version <strong id="dl-version">v2.0.14</strong></p>
+  <p><a href="https://github.com/shirick-hami/lentra-dtt-site/releases/latest/download/lentra-dtt.apk" style="display:inline-block;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:600;margin:0 8px 8px 0;background:#183665;color:#fff">Download for most phones · 16.1 MB</a><a href="https://github.com/shirick-hami/lentra-dtt-site/releases/latest/download/lentra-dtt-32bit.apk" style="display:inline-block;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:600;margin:0 8px 8px 0;border:1px solid #183665;color:#183665">Older 32-bit phones · 7.2 MB</a></p>
+  <p style="font-size:14px;color:#5f6675">Not sure? Take the first one: every phone sold since about 2017 is 64-bit. The 32-bit build cannot run the on-device model. This exact version: <a href="https://github.com/shirick-hami/lentra-dtt-site/releases/download/v2.0.14/lentra-dtt-2.0.14.apk">64-bit</a> · <a href="https://github.com/shirick-hami/lentra-dtt-site/releases/download/v2.0.14/lentra-dtt-2.0.14-32bit.apk">32-bit</a> · <a href="https://github.com/shirick-hami/lentra-dtt-site/releases">all releases</a></p>
+  <details style="font-size:14px"><summary>How to install</summary>
+    <ol>
+      <li>Open the downloaded file on your phone. Android asks to allow installs from your browser or Files app; allow it once.</li>
+      <li>If an older Lentra DTT is installed, it updates in place. A <em>debug</em> build must be uninstalled first (different signature).</li>
+      <li>Verify the file if you like. SHA-256, 64-bit: <code id="dl-sha" style="word-break:break-all">05ca237bc93f4b9f93548d4463313593e02a10993b76f6ec870a060a0980548c</code>; 32-bit: <code id="dl-sha-32" style="word-break:break-all">18c30288c4b928ffb23b75a70580450d3ca4fa5449f09e6ae2ceb73707da2937</code></li>
+    </ol>
+    <p>iPhone: distributed via TestFlight; ask your engineering lead for the invite.</p>
+  </details>
+  <details style="font-size:14px;margin-top:10px"><summary>LDTT Admin (main admin only)</summary>
+    <p>The separate admin app. Only the main admin's Google account can sign in; for everyone else it opens to a refusal.
+    <a href="https://github.com/shirick-hami/lentra-dtt-site/releases/latest/download/lentra-dtt-admin.apk">Download LDTT Admin · 7.8 MB</a> · <a href="https://github.com/shirick-hami/lentra-dtt-site/releases/latest/download/lentra-dtt-admin-32bit.apk">32-bit</a></p>
+    <p>SHA-256: <code id="dl-sha-admin" style="word-break:break-all">9a69c2472410c7bf2ec23137cd380b17348e1848146767238c53419e251b3a18</code></p>
+  </details>
+</section>
+<section id="features">
+  <h2>What the app does</h2>
+  <p>Everything in the current version, grouped by task.</p>
+  <nav class="jump" aria-label="Feature groups"><a href="#f-log">Logging</a><a href="#f-safe">Undo and ledger</a><a href="#f-insights">Insights and reports</a><a href="#f-remind">Reminders</a><a href="#f-team">Teams</a><a href="#f-admin">Admin mode</a><a href="#f-backup">Backup</a><a href="#f-privacy">Security and privacy</a><a href="#f-access">Accessibility</a><a href="#f-start">Getting started</a></nav>
+  <div class="grid">
+    <div class="grp" id="f-log"><h3>Log effort from a branch</h3><ul>
+      <li>Pick a GitLab repository and branch. The app reads its commits and changes and groups the work into a few broad tasks.</li>
+      <li>Choose how commits are grouped: <b>built-in rules</b> (default, free, offline), <b>Claude</b> with your own API key, a <b>self-hosted model</b> your company runs (Ollama, vLLM and other OpenAI-compatible servers), or an <b>on-device model</b> that runs on the phone.</li>
+      <li>Precision levels <b>Fast</b>, <b>Balanced</b> and <b>Precise</b> set how much of each change the model reads. Before grouping starts you see the Claude cost or the on-device time estimate, and can change the level for that run.</li>
+      <li>Review each task: title, description, microservice and hours. Suggested hours are only a hint until you tap Use.</li>
+      <li>Per task, log only, move to testing with a tester, or close it (with a confirmation).</li>
+      <li>The next run of the same branch offers “New commits only”.</li>
+    </ul></div>
+    <div class="grp"><h3>Other ways to log</h3><ul>
+      <li><b>Against an existing ticket</b>: search by id (ISS-515700 or 515700), a pasted DevRev link or title words, or pick from “Assigned to me”.</li>
+      <li><b>Pinned tickets</b> sit on the Effort home screen, two taps from logging.</li>
+      <li><b>Create a ticket</b>: subtype, part, assignee, reporter, priority, customer, environment and sprint, plus whatever DevRev's own form requires for that subtype. It starts in the subtype's first stage.</li>
+      <li><b>Move stage</b>: take a ticket to its next stage; the app asks for the fields DevRev requires there (estimated effort, AI hours saved, re-usability…).</li>
+      <li><b>Misc hours</b>: leave, internal and client meetings, training, town hall, client visits, plus your own categories.</li>
+      <li>Type hours to the minute: 1:30, 1h 30m, 90m or 1.5, or tap a quick value from 30m to 8h.</li>
+      <li>Log any past day or today, with the customer, journey/product, type of activity and a description on each entry.</li>
+    </ul></div>
+    <div class="grp" id="f-safe"><h3>Undo, ledger and resumable jobs</h3><ul>
+      <li><b>Undo</b> an effort entry from the confirmation or later from the Ledger (today's entries in normal mode). A ticket the entry created stays in DevRev.</li>
+      <li>The <b>Ledger</b> lists everything logged from this phone, and exports as an encrypted ZIP.</li>
+      <li>Every DevRev write runs as a saved <b>job</b>. If the app closes or the connection drops, it continues from the failed step and never logs the same hours twice.</li>
+      <li>Unfinished jobs show on the Effort home screen with Continue.</li>
+      <li>Clear messages name the service and what to do; an offline banner shows while there is no connection.</li>
+    </ul></div>
+    <div class="grp" id="f-insights"><h3>Insights and monthly reports</h3><ul>
+      <li>Day, week, month and year views; week, month and year as a chart or a table.</li>
+      <li>The day view shows the hours logged that day, split by type of activity, with every entry and its description.</li>
+      <li>A month heat map shows how much you logged each day.</li>
+      <li>Your weekly target is marked, and Insights says whether you are over, on or under it.</li>
+      <li>A “By ticket” card shows your hours per ticket; tap one to see them by type of activity, entry by entry.</li>
+      <li>Share a view as CSV. Pull to refresh.</li>
+      <li><b>Monthly report</b> in timesheet layout: totals, week by week, by product, tickets, misc and daily detail. Export as PDF or CSV; with Google Drive connected, a Google Sheet copy is saved too.</li>
+    </ul></div>
+    <div class="grp" id="f-remind"><h3>Reminders and notifications</h3><ul>
+      <li>A <b>daily reminder</b> at the hour you choose, when nothing has been logged yet.</li>
+      <li><b>Push notifications</b> for join requests, invites, approvals, reminders from your manager and admin access changes, even when the app is closed.</li>
+      <li>Reminders from your manager also appear on your Effort home screen.</li>
+    </ul></div>
+    <div class="grp" id="f-team"><h3>Teams</h3><ul>
+      <li>Set your <b>reporting manager</b> in onboarding or Settings. This sends a join request that your manager approves.</li>
+      <li>Managers <b>invite</b> teammates, who accept or decline. Nothing changes until both sides agree.</li>
+      <li>Share your <b>join code</b> as a QR code; a teammate scans it to ask to join. People whose DevRev entries name you as manager are suggested for an invite.</li>
+      <li><b>My team</b>: a tree, chart or table of hours per person and per sub-team, with search and encrypted CSV export. You see only your own chain and the teams below you.</li>
+      <li><b>Team reminders</b>: daily, weekly or monthly, see who still has effort pending, then send a reminder to their phones (with delivered and seen status), post a DevRev comment, open an email draft or copy the text.</li>
+      <li><b>Team compliance</b> (admins): who is under the weekly target this week and last, including people who logged nothing, with a per-day drill-down and encrypted CSV export.</li>
+    </ul></div>
+    <div class="grp" id="f-admin"><h3>Admin mode</h3><ul>
+      <li>One app for everyone. Admin tools unlock inside it with a Google sign-in that Lentra's admin service verifies, then your phone lock confirms it is you.</li>
+      <li>Admins sign in with their work Google account; only the main admin may use a personal one.</li>
+      <li>Admin mode stays on for up to three days without use, and the phone lock is asked every time the app opens. The sign-in renews itself in the background.</li>
+      <li>It unlocks ticket overrides, undoing older entries, org settings and team compliance.</li>
+      <li>Admins can add or remove other admins. A removal takes effect at once: the admin service refuses the person, and their admin mode ends.</li>
+      <li>Daily usage limits per person keep the service within its free plan; logging effort is never blocked by them.</li>
+      <li>Admin changes, sign-ins and privileged actions go to an audit log with a restricted reader.</li>
+    </ul></div>
+    <div class="grp" id="f-backup"><h3>Backup and restore</h3><ul>
+      <li>Back up an <b>encrypted</b> copy of your data to the phone or to your work <b>Google Drive</b>. Drive backups sit in a hidden folder only the app can see.</li>
+      <li>Every file you download is inside an <b>AES-256 password-protected ZIP</b>.</li>
+      <li>Restore on a new phone from the downloaded data ZIP. Tokens are never in a backup; you enter them again.</li>
+    </ul></div>
+    <div class="grp" id="f-privacy"><h3>Security and privacy</h3><ul>
+      <li>Access tokens stay in the phone's <b>keychain</b>. Everything else is in an <b>encrypted database</b> only the app can open; Android auto-backup is off.</li>
+      <li>Optional <b>biometric or screen lock</b> after a set time in the background.</li>
+      <li>The app talks directly to DevRev and GitLab, and to Google Drive or an AI provider only if you turn them on. Lentra's team service keeps team links, admin records and notification details, never your tokens, effort entries, code or backups.</li>
+      <li>Only your own effort entries and your team's are kept on the phone. With the on-device model, your code never leaves the phone.</li>
+      <li>Diagnostics can be switched off in Settings. Signing out removes every stored secret. Details are in the <a href="privacy.html">privacy policy</a>.</li>
+    </ul></div>
+    <div class="grp" id="f-access"><h3>Accessibility and dark mode</h3><ul>
+      <li>Works with TalkBack: every button has a name, choices read as radio buttons, progress and errors are announced, and charts describe their numbers.</li>
+      <li>Pinch to zoom enlarges text.</li>
+      <li>Dark mode follows your phone's setting, including charts, the heat map and the launch screen.</li>
+      <li>Hours, dates and times use one format, in your own time zone.</li>
+    </ul></div>
+    <div class="grp" id="f-start"><h3>Getting started</h3><ul>
+      <li>Guided onboarding for <b>developers</b> and <b>non-developers</b>, showing Step x of y. Tokens are verified during setup, with in-app guides on how to get each one.</li>
+      <li>Skip the manager step or GitLab and come back later.</li>
+      <li><b>Team presets</b>: share repositories, misc categories and defaults as a QR code or text code. A preset that changes a server address shows the old and new address and asks first.</li>
+      <li>Two Android downloads: <b>64-bit</b> for almost every phone, and <b>32-bit</b> for older phones (no on-device model). iPhone builds come through TestFlight.</li>
+    </ul></div>
+  </div>
+</section>
+<ul>
+  <li><a href="privacy.html">Privacy policy</a></li>
+  <li><a href="terms.html">Terms of service</a></li>
+</ul>
+<footer>© Lentra. Internal tool. Contact your engineering lead for access.</footer>
+</body></html>
