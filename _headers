@@ -1,0 +1,12 @@
+# Cloudflare Pages headers for the download site (https://lentra-dtt-site.pages.dev). GitHub Pages ignores this file.
+# The site has no scripts: everything is static HTML with inline styles.
+/*
+  Content-Security-Policy: default-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin
+  Strict-Transport-Security: max-age=31536000
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+/admin-service.json
+  Cache-Control: no-cache
+  Access-Control-Allow-Origin: *
